@@ -11,10 +11,13 @@ if (!Context) {
 
 }
   const { readBook, setReadBook } = Context;
+  const { wishlist, setWishlist } = Context;
 
   const ClickReadBook = () => {
     setReadBook([...readBook, BookData]);
-
+  };
+  const ClickWishlist = () => {
+    setWishlist([...wishlist, BookData]);
   };
   console.log(readBook);
   return (
@@ -26,7 +29,10 @@ if (!Context) {
       >
         Read
       </button>
-      <button className="btn bg-[#59c6d2] hover:bg-[#4ab3be] text-white px-8 font-semibold border-0">
+      <button
+        onClick={ClickWishlist}
+        className="btn bg-[#59c6d2] hover:bg-[#4ab3be] text-white px-8 font-semibold border-0"
+      >
         Wishlist
       </button>
     </div>
