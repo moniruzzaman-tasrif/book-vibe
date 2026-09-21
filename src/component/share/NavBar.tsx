@@ -2,10 +2,22 @@ import Link from 'next/link';
 import React from 'react';
 
 const NavBar = () => {
-  const linkNav=<>
-<li> <Link href="/">Home</Link> </li>
-<li> <Link href="/BookList">Book</Link> </li>
-  </>
+  const linkNav = (
+    <>
+      <li>
+        {" "}
+        <Link href="/">Home</Link>{" "}
+      </li>
+      <li>
+        {" "}
+        <Link href="/BookList">Book</Link>{" "}
+      </li>
+      <li>
+        {" "}
+        <Link href="/AllBookList">Book List</Link>{" "}
+      </li>
+    </>
+  );
   return (
     <div>
       <div className="max-lg:collapse bg-base-200  shadow-sm w-full rounded-md">

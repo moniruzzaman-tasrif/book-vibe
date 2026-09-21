@@ -1,6 +1,7 @@
 import { BookType } from '@/BookType';
 import Image from 'next/image';
 import React from 'react';
+import Button from '../share/button';
 interface detaildata {
   detailsData:BookType
 }
@@ -87,13 +88,8 @@ const Bookdetails = ({detailsData}:detaildata) => {
           </div>
 
           {/* Action Buttons */}
-          <div className="flex items-center gap-4 mt-6">
-            <button className="btn btn-outline border-gray-300 px-8 font-semibold text-gray-800 hover:bg-gray-100 hover:border-gray-400">
-              Read
-            </button>
-            <button className="btn bg-[#59c6d2] hover:bg-[#4ab3be] text-white px-8 font-semibold border-0">
-              Wishlist
-            </button>
+          <div className="">
+            <Button BookData={detailsData}></Button>
           </div>
         </div>
       </div>

@@ -17,7 +17,6 @@ const page = async ({ params }: dtnamicPage) => {
   const { BookId } = await params;
  const dataBook = await daynamicData()
  const findData=dataBook.find((item: BookType) => BookId === String(item.bookId) );
- console.log(findData);
   return (
     <div>
       <Bookdetails detailsData={findData}></Bookdetails>
